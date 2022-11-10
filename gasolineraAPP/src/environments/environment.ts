@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  DATA_URL: 'https://raw.githubusercontent.com/Antoniomonforma99/gasolinerasAPI/main/DATA'
 };
 
 /*
