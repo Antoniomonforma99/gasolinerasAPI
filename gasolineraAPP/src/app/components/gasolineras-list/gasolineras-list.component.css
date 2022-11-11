@@ -1,0 +1,27 @@
+table{
+    width: 100%;
+}
+.content-table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-bottom: 2px solid #009879;
+}
+
+.content-table th {
+    background-color: #009879;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 25px 5px;
+}
+
+.content-table td {
+    text-align: center;
+    padding: 12px 5px;
+}
+.all{
+    display: flex;
+}
+
+

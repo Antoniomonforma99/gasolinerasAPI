@@ -1,3 +1,101 @@
-<div *ngFor="let gasolinera of gasolinerasList">
-    <p>{{gasolinera['Dirección']}}</p>
+<div class="all">
+    <app-filter></app-filter>
+
+<div>
+    <table mat-table [dataSource]="gasolinerasList" class="mat-elevation-z8 content-table">
+        <!-- Rotulo Column -->
+        <ng-container matColumnDef="rotulo">
+          <th mat-header-cell *matHeaderCellDef> Rótulo </th>
+          <td mat-cell *matCellDef="let g"> {{g['Rótulo']}} </td>
+        </ng-container>
+      
+        <!-- Localidad Column -->
+        <ng-container matColumnDef="localidad">
+          <th mat-header-cell *matHeaderCellDef> Localidad </th>
+          <td mat-cell *matCellDef="let g"> {{g['Localidad']}} </td>
+        </ng-container>
+      
+        <!-- Provincia Column -->
+        <ng-container matColumnDef="provincia">
+          <th mat-header-cell *matHeaderCellDef> Provincia </th>
+          <td mat-cell *matCellDef="let g"> {{g['Provincia']}}</td>
+        </ng-container>
+        
+        <!-- Biodiesel Column -->
+        <ng-container matColumnDef="precioBiodiesel">
+            <th mat-header-cell *matHeaderCellDef>Biodiesel </th>
+            <td mat-cell *matCellDef="let g"> {{g['Precio Biodiesel']}} e/L</td>
+          </ng-container>
+
+                <!-- Bioetanol Column -->
+                <ng-container matColumnDef="precioBioetanol">
+                    <th mat-header-cell *matHeaderCellDef>Bioetanol </th>
+                    <td mat-cell *matCellDef="let g"> {{g['Precio Bioetanol']}} e/L </td>
+                  </ng-container>
+        
+          <!-- GasNAtural Column -->
+          <ng-container matColumnDef="precioGasNaturalComprimido">
+            <th mat-header-cell *matHeaderCellDef>Gas Natural </th>
+            <td mat-cell *matCellDef="let g"> {{g['Precio Gas Natural Comprimido']}} e/L</td>
+          </ng-container>
+        
+          <!-- GasesLicuados Column -->
+          <ng-container matColumnDef="precioGasesLicuadosDelPetroleo">
+            <th mat-header-cell *matHeaderCellDef> Gases Licuados </th>
+            <td mat-cell *matCellDef="let g"> {{g['Precio Gases licuados del petróleo']}} e/L</td>
+          </ng-container>
+        
+          <!-- GasoleoA Column -->
+          <ng-container matColumnDef="precioGasoleoA">
+            <th mat-header-cell *matHeaderCellDef> Gasoleo A </th>
+            <td mat-cell *matCellDef="let g"> {{g['Precio Gasoleo A']}} e/L</td>
+          </ng-container>
+        
+          <!-- Gasoleo B Column -->
+          <ng-container matColumnDef="precioGasoleoB">
+            <th mat-header-cell *matHeaderCellDef> Gasoleo B </th>
+            <td mat-cell *matCellDef="let g"> {{g['Precio Gasoleo B']}} e/L</td>
+          </ng-container>
+        
+          <!-- Gasoleo premium Column -->
+          <ng-container matColumnDef="precioGasoleoPremium">
+            <th mat-header-cell *matHeaderCellDef> Gasoleo Premium </th>
+            <td mat-cell *matCellDef="let g"> {{g['Precio Gasoleo Premium']}} e/L</td>
+          </ng-container>
+
+
+              <!-- Gasolina 95E10 Column -->
+              <ng-container matColumnDef="precioGasolina95E10">
+                <th mat-header-cell *matHeaderCellDef> Gasolina 95 E10 </th>
+                <td mat-cell *matCellDef="let g"> {{g['Precio Gasolina 95 E10']}} e/L</td>
+              </ng-container>
+            
+              <!-- Gasolina 95E5 Column -->
+              <ng-container matColumnDef="precioGasolina95E5">
+                <th mat-header-cell *matHeaderCellDef> Gasolina 95 E5 </th>
+                <td mat-cell *matCellDef="let g"> {{g['Precio Gasolina 95 E5']}} e/L</td>
+              </ng-container>
+            
+              <!-- Gasolina 95E5 Premium Column -->
+              <ng-container matColumnDef="precioGasolina95E5Premium">
+                <th mat-header-cell *matHeaderCellDef> Gasolina 95 E5 Premium </th>
+                <td mat-cell *matCellDef="let g"> {{g['Precio Gasolina 95 E5 Premium']}} e/L</td>
+              </ng-container>
+            
+              <!-- Gasolina 98E10 Column -->
+              <ng-container matColumnDef="precioGasolina98E10">
+                <th mat-header-cell *matHeaderCellDef> Gasolina 98 E10 </th>
+                <td mat-cell *matCellDef="let g"> {{g['Precio Gasolina 98 E10']}} e/L</td>
+              </ng-container>
+                          <!-- Gasolina 98E5 Column -->
+                          <ng-container matColumnDef="precioGasolina98E5">
+                            <th mat-header-cell *matHeaderCellDef> Gasolina 98 E5 e/L</th>
+                            <td mat-cell *matCellDef="let g"> {{g['Precio Gasolina 98 E5']}} </td>
+                          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 </div>
+</div>
+
+
