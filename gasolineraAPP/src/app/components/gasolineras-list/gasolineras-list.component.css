@@ -21,7 +21,10 @@ table{
     padding: 12px 5px;
 }
 .all{
-    display: flex;
+    width: auto;
+    float: left;
+    display: inline;
+    position: relative;
 }
 
 

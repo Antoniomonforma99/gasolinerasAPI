@@ -1,6 +1,7 @@
 <div>
     <h1>Seleccione un precio:</h1>
     <mat-slider
+    #matslider
   thumbLabel
   [displayWith]="formatLabel"
   tickInterval="1000"
@@ -9,6 +10,6 @@
   max="3.5"
   aria-label="units"></mat-slider>
 
-  <button>Filtrar</button>
+  <button (click)="filtrarGasolineras(matslider.value)">Filtrar</button>
 </div>
 

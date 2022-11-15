@@ -20,4 +20,8 @@ export class FilterComponent implements OnInit {
     return value;
   }
 
+  filtrarGasolineras(value: number){
+    
+  }
+
 }

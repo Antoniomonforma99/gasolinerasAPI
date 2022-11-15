@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { GasolinerasListComponent } from './components/gasolineras-list/gasolineras-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterComponent } from './components/filter/filter.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GasolinerasListComponent,
     FilterComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,

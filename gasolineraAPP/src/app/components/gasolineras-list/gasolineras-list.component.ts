@@ -11,6 +11,8 @@ export class GasolinerasListComponent implements OnInit {
 
   gasolinerasList: Gasolinera[] = [];
 
+  gasolinerasListFiltered: Gasolinera[] = [];
+
   displayedColumns: string[] = [
     'rotulo', 
     'localidad', 
@@ -40,7 +42,19 @@ export class GasolinerasListComponent implements OnInit {
       this.gasolinerasList =  res.ListaEESSPrecio;
     })
   }
+  /*
+  getGasolinerasFiltered(): void {
+    this.gasolinerasList.forEach(gasolinera => {
+      if (gasolinera.) {
+        
+      }
+    });
+  }
 
+  */
+
+  
+  
 
 
 }
